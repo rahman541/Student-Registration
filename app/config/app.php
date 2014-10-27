@@ -122,7 +122,9 @@ return array(
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 
+		'Way\Generators\GeneratorsServiceProvider',
 		'Robbo\Presenter\PresenterServiceProvider',
+		'Illuminate\View\ViewServiceProvider',
 	),
 
 	/*

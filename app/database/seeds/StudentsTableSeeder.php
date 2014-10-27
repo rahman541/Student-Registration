@@ -26,5 +26,4 @@ class StudentsTableSeeder extends Seeder {
 			]);
 		}
 	}
-
 }

@@ -125,6 +125,8 @@ return array(
 		'Way\Generators\GeneratorsServiceProvider',
 		'Robbo\Presenter\PresenterServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
+
+		'Menu\MenuServiceProvider',
 	),
 
 	/*
@@ -192,6 +194,7 @@ return array(
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
 
+		'Menu' => 'Menu\Menu',
 	),
 
 );

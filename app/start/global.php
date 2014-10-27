@@ -79,3 +79,6 @@ App::down(function()
 */
 
 require app_path().'/filters.php';
+
+//Custom - Rahman
+require app_path() . '/helper/HTMLHelper.php';

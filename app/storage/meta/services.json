@@ -28,7 +28,8 @@
         "Illuminate\\Workbench\\WorkbenchServiceProvider",
         "Way\\Generators\\GeneratorsServiceProvider",
         "Robbo\\Presenter\\PresenterServiceProvider",
-        "Illuminate\\View\\ViewServiceProvider"
+        "Illuminate\\View\\ViewServiceProvider",
+        "Menu\\MenuServiceProvider"
     ],
     "eager": [
         "Illuminate\\Cookie\\CookieServiceProvider",
@@ -40,7 +41,8 @@
         "Illuminate\\Workbench\\WorkbenchServiceProvider",
         "Way\\Generators\\GeneratorsServiceProvider",
         "Robbo\\Presenter\\PresenterServiceProvider",
-        "Illuminate\\View\\ViewServiceProvider"
+        "Illuminate\\View\\ViewServiceProvider",
+        "Menu\\MenuServiceProvider"
     ],
     "deferred": {
         "artisan": "Illuminate\\Foundation\\Providers\\ArtisanServiceProvider",

@@ -32,4 +32,5 @@
 	@endif
 
 	<p>{{ link_to_route('students.create', 'Add new students') }}</p>
+	{{ Menu::handler('main')->render() }}
 @endsection

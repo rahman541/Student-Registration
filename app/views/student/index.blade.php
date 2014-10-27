@@ -24,3 +24,5 @@
 @else
 	There are no student
 @endif
+
+<p>{{ link_to_route('student.create', 'Add new user') }}</p>

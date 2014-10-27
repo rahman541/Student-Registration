@@ -10,9 +10,8 @@ class CreateStudentTable extends Migration {
 	 *
 	 * @return void
 	 */
-	public function up()
-	{
-		Schema::create('student', function(Blueprint $table) {
+	public function up(){
+		Schema::create('student', function($table) {
 			$table->increments('id');
 			$table->string('email');
 			$table->string('password');

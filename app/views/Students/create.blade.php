@@ -1,7 +1,7 @@
 @extends('layouts.scaffold')
 @section('main')
 	<h1>Create Student</h1>
-	<small>{{ link_to_route('students.index', 'Home') }}</small>
+	<!-- <small>{{ link_to_route('students.index', 'Home') }}</small> -->
 
 	{{ Form::open(array('route' => 'students.store')) }}
 		<ul>

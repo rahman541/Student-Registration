@@ -7,10 +7,8 @@ class StudentsController extends \BaseController {
 	 *
 	 * @return Response
 	 */
-	public function index()
-	{
+	public function index(){
 		$students = Student::all();
-
 		return View::make('students.index', compact('students'));
 	}
 

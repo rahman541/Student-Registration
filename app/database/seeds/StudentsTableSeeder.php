@@ -16,8 +16,7 @@ class StudentsTableSeeder extends Seeder {
 		$faker->addProvider(new Faker\Provider\Internet($faker));
 		$faker->addProvider(new Faker\Provider\en_US\Company($faker));
 
-		foreach(range(1, 10) as $index)
-		{
+		foreach(range(1, 3) as $index){
 			Student::create([
 				'first_name' => $faker->firstName,
 				'last_name' => $faker->lastName,

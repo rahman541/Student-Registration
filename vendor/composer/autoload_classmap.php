@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'BaseController' => $baseDir . '/app/controllers/BaseController.php',
+    'BasePresenter' => $baseDir . '/app/presenters/BasePresenter.php',
     'Boris\\Boris' => $vendorDir . '/d11wtq/boris/lib/Boris/Boris.php',
     'Boris\\CLIOptionsHandler' => $vendorDir . '/d11wtq/boris/lib/Boris/CLIOptionsHandler.php',
     'Boris\\ColoredInspector' => $vendorDir . '/d11wtq/boris/lib/Boris/ColoredInspector.php',
@@ -1224,6 +1225,7 @@ return array(
     'Stack\\Builder' => $vendorDir . '/stack/builder/src/Stack/Builder.php',
     'Stack\\StackedHttpKernel' => $vendorDir . '/stack/builder/src/Stack/StackedHttpKernel.php',
     'Student' => $baseDir . '/app/models/Student.php',
+    'StudentPresenter' => $baseDir . '/app/presenters/StudentPresenter.php',
     'StudentsController' => $baseDir . '/app/controllers/StudentsController.php',
     'StudentsTableSeeder' => $baseDir . '/app/database/seeds/StudentsTableSeeder.php',
     'Symfony\\Component\\BrowserKit\\Client' => $vendorDir . '/symfony/browser-kit/Symfony/Component/BrowserKit/Client.php',

@@ -17,12 +17,12 @@
 			<tbody>
 				@foreach ($students as $stud)
 					<tr>
-						<td>{{{ $stud->email }}}</td>
+						<td><a href="{{URL::route('students.show', $stud->id)}}">{{{ $stud->email }}}</a></td>
 						<td>{{{ $stud->first_name }}}</td>
 						<td>{{{ $stud->last_name }}}</td>
 						<td>{{{ $stud->password }}}</td>
-						<td>{{ $stud->avatar }}</td>
-						<td>{{ $stud->avatar }}</td>
+						<td class="center">{{ $stud->avatar }}</td>
+						<td class="center"><a href="{{ URL::route('students.edit', $stud->id) }}"><i class="glyphicon glyphicon-pencil"></i></a></td>
 					</tr>
 				@endforeach
 			</tbody>

@@ -4,6 +4,7 @@
 			$email = trim($this->email);
 			$email = strtolower( $email );
 			$email = md5($email);
-			return "<img src=\"http://www.gravatar.com/avatar/$email\">";
+			$link = "http://www.gravatar.com/avatar/".$email;
+			return "<a href=\"$link\"><img src=\"$link\"></a>";
 		}
 	}

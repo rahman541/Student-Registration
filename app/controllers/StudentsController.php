@@ -38,6 +38,7 @@ class StudentsController extends \BaseController {
 
 		Student::create($data);
 
+		Session::flash('message', 'Successfully created student!');
 		return Redirect::route('students.index');
 	}
 
@@ -86,7 +87,7 @@ class StudentsController extends \BaseController {
 
 		$student->update($data);
 
-		return Redirect::route('students.index');
+		return Redirect::route('students.index')->with('message','The student was update successfully!');
 	}
 
 	/**

@@ -31,9 +31,5 @@
 		</ul>
 	{{ Form::close() }}
 
-	@if ($errors->any())
-		<ul>
-			{{ implode('', $errors->all('<li class="error">:message</li>')) }}
-		</ul>
-	@endif
+	@include('common.student_errors')
 @endsection

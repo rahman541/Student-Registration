@@ -10,13 +10,17 @@
 			form ul { margin-left: 0; list-style: none; }
 			.error { color: red; font-style: italic; }
 			body { padding-top: 20px; }
+			table tr .center{
+				text-align: center;
+			}
 		</style>
 	</head>
 	<body>
 		<div class="container">
+			@include('common.menu')
 			@if (Session::has('message'))
 				<div class="flash alert">
-					<p>{{ Session::get('message') }}</p>
+					<div class="alert alert-info">{{ Session::get('message') }}</div>
 				</div>
 			@endif
 			@yield('main')

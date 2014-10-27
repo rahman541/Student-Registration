@@ -10,6 +10,7 @@
 					<th>Last Name</th>
 					<th>Password</th>
 					<th>Avatar</th>
+					<th>Action</th>
 				</tr>
 			</thead>
 
@@ -21,6 +22,7 @@
 						<td>{{{ $stud->last_name }}}</td>
 						<td>{{{ $stud->password }}}</td>
 						<td>{{ $stud->avatar }}</td>
+						<td>{{ $stud->avatar }}</td>
 					</tr>
 				@endforeach
 			</tbody>
@@ -29,5 +31,5 @@
 		There are no students
 	@endif
 
-	<p>{{ link_to_route('student.create', 'Add new user') }}</p>
+	<p>{{ link_to_route('students.create', 'Add new students') }}</p>
 @endsection

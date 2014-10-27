@@ -14,9 +14,9 @@ class CreateStudentTable extends Migration {
 		Schema::create('student', function($table) {
 			$table->increments('id');
 			$table->string('email');
-			$table->string('password');
 			$table->string('first_name');
 			$table->string('last_name');
+			$table->string('password');
 			$table->timestamps();
 		});
 	}

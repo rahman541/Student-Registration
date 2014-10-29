@@ -3,8 +3,12 @@
 	<head>
 		<meta charset="utf-8">
 		<title>{{ $title or 'Default' }}</title>
-		<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
-		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+		{{-- Load Bootstrap CSS Framework --}}
+		{{ HTML::style('css/bootstrap.min.css'); }}
+		{{ HTML::style('css/bootstrap-theme.min.css'); }}
+		{{ HTML::script('js/bootstrap.min.js'); }}
+
 		<style>
 			table form { margin-bottom: 0; }
 			form ul { margin-left: 0; list-style: none; }

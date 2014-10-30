@@ -9,5 +9,11 @@
             <h6>Created Date: {{ $student->created_at }}</h6>
             <h6>Last Modified: {{ $student->updated_at }}</h6>
         </p>
+        <span>
+            {{ Form::open(array('route'=>array('students.update', $student->id), 'method'=>'DELETE')) }}
+                {{ Form::hidden('id',$student->id) }}
+                {{ Form::submit('Delete', array('class'=>'btn_link')) }}
+            {{ Form::close() }}
+        </span>
     </div>
 @endsection

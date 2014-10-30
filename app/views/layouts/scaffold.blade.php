@@ -18,6 +18,16 @@
 				text-align: center;
 			}
 		</style>
+		<style type="text/css">
+			.btn_link {
+			    background:none!important;
+			     border:none; 
+			     padding:0!important;
+			    /*border is optional*/
+			     border-bottom:1px solid #444; 
+			     cursor: pointer;
+			}
+		</style>
 	</head>
 	<body>
 		<div class="container">

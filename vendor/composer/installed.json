@@ -1792,12 +1792,12 @@
         "source": {
             "type": "git",
             "url": "https://github.com/fzaninotto/Faker.git",
-            "reference": "b6d383161d84092a7a9f5b14db6e2637edbd3a6e"
+            "reference": "0cc304ac4870fed7ea61d9b32b0c954f25d4ce37"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/b6d383161d84092a7a9f5b14db6e2637edbd3a6e",
-            "reference": "b6d383161d84092a7a9f5b14db6e2637edbd3a6e",
+            "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/0cc304ac4870fed7ea61d9b32b0c954f25d4ce37",
+            "reference": "0cc304ac4870fed7ea61d9b32b0c954f25d4ce37",
             "shasum": ""
         },
         "require": {
@@ -1807,7 +1807,7 @@
             "phpunit/phpunit": "~4.0",
             "squizlabs/php_codesniffer": "~1.5"
         },
-        "time": "2014-10-14 14:30:56",
+        "time": "2014-10-29 09:35:45",
         "type": "library",
         "extra": {
             "branch-alias": {

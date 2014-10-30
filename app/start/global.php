@@ -80,5 +80,7 @@ App::down(function()
 
 require app_path().'/filters.php';
 
-//Custom - Rahman
+//Custom - Macro
 require app_path() . '/helper/HTMLHelper.php';
+require app_path() . '/helper/MnshankarFormHelper.php';
+require app_path() . '/helper/FormHelper.php';

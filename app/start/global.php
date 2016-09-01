@@ -84,3 +84,10 @@ require app_path().'/filters.php';
 require app_path() . '/helper/HTMLHelper.php';
 require app_path() . '/helper/MnshankarFormHelper.php';
 require app_path() . '/helper/FormHelper.php';
+
+// DotEnv
+$dotEnv = new Dotenv\Dotenv(base_path());
+$dotEnv->load();
+$env = $app->detectEnvironment(function () {
+    return getenv('APP_ENV') ?: 'development';
+});

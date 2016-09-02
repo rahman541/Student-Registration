@@ -5,8 +5,8 @@
 		<title>{!! $title or 'Default' !!}</title>
 
 		{{-- Load Bootstrap CSS Framework --}}
-		{{ HTML::style('bootstrap-3.3.7-dist/css/bootstrap.min.css') }}
-		{{ HTML::style('bootstrap-3.3.7-dist/css/bootstrap-theme.min.css') }}
+		{!! HTML::style('bootstrap-3.3.7-dist/css/bootstrap.min.css') !!}
+		{!! HTML::style('bootstrap-3.3.7-dist/css/bootstrap-theme.min.css') !!}
 
 		<style>
 			table form { margin-bottom: 0; }

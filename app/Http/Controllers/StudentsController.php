@@ -110,7 +110,7 @@ class StudentsController extends Controller {
 	public function destroy($id)
 	{
 		$student = Student::find($id);
-		if($id>0){
+		if(count($student)>0){
 			Student::destroy($id);
 			Session::flash('message', 'Successfully delete '.$student->name);
 			Session::flash('alert-class', 'alert-info'); 

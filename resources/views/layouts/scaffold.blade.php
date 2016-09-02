@@ -5,9 +5,8 @@
 		<title>{{ $title or 'Default' }}</title>
 
 		{{-- Load Bootstrap CSS Framework --}}
-		{{ HTML::style('css/bootstrap.min.css') }}
-		{{ HTML::style('css/bootstrap-theme.min.css') }}
-		{{ HTML::script('js/bootstrap.min.js') }}
+		{{ HTML::style('bootstrap-3.3.7-dist/css/bootstrap.min.css') }}
+		{{ HTML::style('bootstrap-3.3.7-dist/css/bootstrap-theme.min.css') }}
 
 		<style>
 			table form { margin-bottom: 0; }
@@ -39,7 +38,8 @@
 			@endif
 			@yield('main')
 		</div>
-
+		{{ HTML::script('js/jquery-3.1.0.slim.min.js') }}
+		{{ HTML::script('bootstrap-3.3.7-dist/js/bootstrap.min.js') }}
 	</body>
 
 </html>

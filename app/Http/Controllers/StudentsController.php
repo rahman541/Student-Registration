@@ -1,6 +1,10 @@
 <?php
 
-class StudentsController extends \BaseController {
+namespace App\Http\Controllers;
+
+use App\models\Student;
+
+class StudentsController extends Controller {
 
 	/**
 	 * Display a listing of students

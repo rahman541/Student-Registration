@@ -26,7 +26,6 @@ vagrant up
 4. Migrate database using artisan
 ```bash
 php artisan migrate
-php artisan migrate --database=mysql
 ```
 
 5. Add dabatase seed

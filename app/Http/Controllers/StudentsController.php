@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Student;
-
+use View;
 class StudentsController extends Controller {
 
 	/**

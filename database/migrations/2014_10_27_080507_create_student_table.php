@@ -16,7 +16,7 @@ class CreateStudentTable extends Migration {
 			$table->string('email');
 			$table->string('first_name');
 			$table->string('last_name');
-			$table->string('no_phone');
+			$table->string('no_phone')->nullable();
 			$table->string('city')->nullable();
 			$table->string('address')->nullable();
 			$table->string('postcode')->nullable();

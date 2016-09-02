@@ -32,11 +32,6 @@
 	<body>
 		<div class="container">
 			@include('common.menu')
-			@if (Session::has('message'))
-				<div class="flash alert">
-					<div class="alert alert-info">{!! Session::get('message') !!}</div>
-				</div>
-			@endif
 			@yield('main')
 		</div>
 		{!! HTML::script('js/jquery-3.1.0.slim.min.js') !!}

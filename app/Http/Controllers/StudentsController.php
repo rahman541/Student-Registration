@@ -28,7 +28,7 @@ class StudentsController extends Controller {
 	 * @return Response
 	 */
 	public function create()
-	{
+{
 		return View::make('students.create');
 	}
 
@@ -46,9 +46,10 @@ class StudentsController extends Controller {
 			return Redirect::back()->withErrors($validator)->withInput();
 		}
 
-		Student::create($data);
+		$student = Student::create($data);
 
-		Session::flash('message', 'Successfully created student!');
+		Session::flash('message', 'Successfully created '.$student->first_name.' student!');
+		Session::flash('alert-class', 'alert-success'); 
 		return Redirect::route('students.index');
 	}
 
@@ -108,9 +109,17 @@ class StudentsController extends Controller {
 	 */
 	public function destroy($id)
 	{
-		Student::destroy($id);
+		$student = Student::find($id);
+		if($id>0){
+			Student::destroy($id);
+			Session::flash('message', 'Successfully delete '.$student->name);
+			Session::flash('alert-class', 'alert-info'); 
+		}
+		else{
+			Session::flash('message', 'Student '.$student->name.' not found!');
+			Session::flash('alert-class', 'alert-danger'); 
+		}
 
 		return Redirect::route('students.index');
 	}
-
 }

@@ -18,7 +18,7 @@ class StudentsTableSeeder extends Seeder {
 			'email' => 'rahmanromli@yahoo.com',
 			'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
-		for ($i=0; $i < 10; $i++) {
+		for ($i=0; $i < 6; $i++) {
 			DB::table('student')->insert([
 	            'first_name' => $faker->firstName,
 				'last_name' => $faker->lastName,

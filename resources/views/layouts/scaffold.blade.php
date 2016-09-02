@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>{!! $title or 'Default' !!}</title>
+		<link rel="icon" type="image/png" sizes="16x16" href="image/favicon-16x16.png">
 
 		{{-- Load Bootstrap CSS Framework --}}
 		{!! HTML::style('bootstrap-3.3.7-dist/css/bootstrap.min.css') !!}

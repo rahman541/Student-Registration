@@ -181,6 +181,7 @@ return [
         // My add
         'Collective\Html\HtmlServiceProvider',
         'App\Providers\HelperServiceProvider',
+        Thomaswelton\LaravelGravatar\LaravelGravatarServiceProvider::class,
     ],
 
     /*
@@ -232,6 +233,7 @@ return [
         'Form' => 'Collective\Html\FormFacade',
 		'HTML' => 'Collective\Html\HtmlFacade',
 		'Input' => Illuminate\Support\Facades\Input::class,
+		'Gravatar' => Thomaswelton\LaravelGravatar\Facades\Gravatar::class,
     ],
 
 ];

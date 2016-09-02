@@ -21,7 +21,7 @@
 						<td>{!! $stud->first_name !!}</td>
 						<td>{!! $stud->last_name !!}</td>
 						<td>{!! $stud->password !!}</td>
-						<td class="center">{!! $stud->avatar !!}</td>
+						<td class="center"><img src="{{ Gravatar::src($stud->email,40) }}"></td>
 						<td class="center"><a href="{!! URL::route('students.edit', $stud->id) !!}"><i class="glyphicon glyphicon-pencil"></i></a></td>
 					</tr>
 				@endforeach

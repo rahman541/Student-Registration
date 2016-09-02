@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\models\Student;
+use App\Models\Student;
 
 class StudentsController extends Controller {
 

@@ -1,11 +1,11 @@
-## Simple Student Registration
-__An example of simple student registration using laravel framework__
-
+Simple Student Registration
+======================
+An example of simple student registration using laravel framework
 ### Installation & Configuration
-___
 #### Platform & Tools
 - [Virtualbox](https://www.virtualbox.org/wiki/Downloads) 4.3.16+
 - [Vagrant](https://www.vagrantup.com/) 1.6.2+
+- SSH client for Windows only : [Cygwin](https://www.cygwin.com/) / [Git Bash](https://git-scm.com/) / [Putty](http://www.putty.org/)
 
 #### Installation
 **1.** Clone this repo.
@@ -25,7 +25,7 @@ vagrant up
 ```
 vagrant ssh
 ```
->**NOTE:** **Windows user might need to use Cygwin or Git Bash since it have ssh client.**
+>**NOTE:** **Windows user might need to use Cygwin or Git Bash or Putty. If putty ssh into `192.168.0.77` use username `vagrant` and password `vagrant`**
 
 **5.** Change to `www` directory
 ```bash

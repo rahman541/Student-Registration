@@ -3,8 +3,8 @@ Simple Student Registration
 An example of simple student registration using laravel framework
 ### Installation & Configuration
 #### Platform & Tools
-- [Virtualbox](https://www.virtualbox.org/wiki/Downloads) 4.3.16+
-- [Vagrant](https://www.vagrantup.com/) 1.6.2+
+- [Virtualbox](https://www.virtualbox.org/wiki/Downloads) 5.0+
+- [Vagrant](https://www.vagrantup.com/) 1.8+
 - SSH client for Windows only : [Cygwin](https://www.cygwin.com/) / [Git Bash](https://git-scm.com/) / [Putty](http://www.putty.org/)
 
 #### Installation

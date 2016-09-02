@@ -6,6 +6,7 @@ use Validator;
 use Input;
 use Redirect;
 use View;
+use Session;
 
 use App\Models\Student;
 

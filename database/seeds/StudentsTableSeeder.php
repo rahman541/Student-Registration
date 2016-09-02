@@ -7,8 +7,8 @@ class StudentsTableSeeder extends Seeder {
 	public function run(){
 		$faker = Faker\Factory::create('ru_RU');
 		DB::table('student')->insert([
-            'first_name' => 'Rahman',
-			'last_name' => 'K',
+            'first_name' => 'Яaнмaи',
+			'last_name' => 'Яомlї',
 			'no_phone' => $faker->phoneNumber,
 			'city' => $faker->city,
 			'address' => $faker->address,

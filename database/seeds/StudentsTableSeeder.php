@@ -4,10 +4,15 @@ use Illuminate\Database\Seeder;
 class StudentsTableSeeder extends Seeder {
 
 	public function run(){
-		$faker = Faker\Factory::create();
+		$faker = Faker\Factory::create('ru_RU');
 		DB::table('student')->insert([
             'first_name' => 'Rahman',
 			'last_name' => 'K',
+			'no_phone' => $faker->phoneNumber,
+			'city' => $faker->city,
+			'address' => $faker->address,
+			'postcode' => $faker->postcode,
+			'country' => $faker->country,
 			'password' => $faker->password,
 			'email' => 'rahmanromli@yahoo.com',
         ]);
@@ -15,6 +20,11 @@ class StudentsTableSeeder extends Seeder {
 			DB::table('student')->insert([
 	            'first_name' => $faker->firstName,
 				'last_name' => $faker->lastName,
+				'no_phone' => $faker->phoneNumber,
+				'city' => $faker->city,
+				'address' => $faker->address,
+				'postcode' => $faker->postcode,
+				'country' => $faker->country,
 				'password' => $faker->password,
 				'email' => $faker->email,
 	        ]);

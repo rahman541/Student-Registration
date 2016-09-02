@@ -8,7 +8,8 @@
 					<th>Email</th>
 					<th>First Name</th>
 					<th>Last Name</th>
-					<th>Password</th>
+					<th>Postcode</th>
+					<th>No. Phone</th>
 					<th>Avatar</th>
 					<th>Action</th>
 				</tr>
@@ -20,7 +21,8 @@
 						<td><a href="{{URL::route('students.show', $stud->id)}}">{{{ $stud->email }}}</a></td>
 						<td>{!! $stud->first_name !!}</td>
 						<td>{!! $stud->last_name !!}</td>
-						<td>{!! $stud->password !!}</td>
+						<td>{!! $stud->postcode !!}</td>
+						<td>{!! $stud->no_phone !!}</td>
 						<td class="center"><img src="{{ Gravatar::src($stud->email,40) }}"></td>
 						<td class="center"><a href="{!! URL::route('students.edit', $stud->id) !!}"><i class="glyphicon glyphicon-pencil"></i></a></td>
 					</tr>

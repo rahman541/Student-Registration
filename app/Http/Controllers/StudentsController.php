@@ -63,7 +63,7 @@ class StudentsController extends Controller {
 	{
 		$student = Student::findOrFail($id);
 
-		return View::make('students.show', compact('student'));
+		return View::make('students.show', compact('student'))->with('title',$student->first_name);
 	}
 
 	/**
@@ -76,7 +76,7 @@ class StudentsController extends Controller {
 	{
 		$student = Student::find($id);
 
-		return View::make('students.edit', compact('student'));
+		return View::make('students.edit', compact('student'))->with('title','Edit: '.$student->first_name);
 	}
 
 	/**

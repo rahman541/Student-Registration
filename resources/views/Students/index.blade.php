@@ -1,10 +1,33 @@
 @extends('layouts.scaffold')
+
+@section('script')
+{{ HTML::script('DataTables-1.10.12/DataTables-1.10.12/js/jquery.dataTables.min.js') }}
+{{ HTML::script('DataTables-1.10.12/DataTables-1.10.12/js/dataTables.bootstrap.min.js') }}
+<script type="text/javascript">
+	$(document).ready(function(){
+	    $('#stud_table').DataTable({
+	    	"pageLength": 5,
+	    	"columnDefs": [ {
+	            "searchable": false,
+	            "targets": 0
+	        } ],
+	        "bLengthChange": false,
+	    });
+	});
+</script>
+@stop
+
+@section('style')
+{!! HTML::style('DataTables-1.10.12/DataTables-1.10.12/css/dataTables.bootstrap.min.css') !!}
+@stop
+
 @section('main')
 	<h1>All Student</h1>
 	@if ($students->count())
-		<table class="table table-striped table-bordered">
+		<table class="table" id="stud_table">
 			<thead>
 				<tr>
+					<th>No.</th>
 					<th>Email</th>
 					<th>First Name</th>
 					<th>Last Name</th>
@@ -16,8 +39,10 @@
 			</thead>
 
 			<tbody>
+				<?php $i=1 ?>
 				@foreach ($students as $stud)
 					<tr>
+						<td>{!! $i !!}</td>
 						<td><a href="{{URL::route('students.show', $stud->id)}}">{{{ $stud->email }}}</a></td>
 						<td>{!! $stud->first_name !!}</td>
 						<td>{!! $stud->last_name !!}</td>
@@ -26,11 +51,12 @@
 						<td class="center"><img src="{{ Gravatar::src($stud->email,40) }}"></td>
 						<td class="center"><a href="{!! URL::route('students.edit', $stud->id) !!}"><i class="glyphicon glyphicon-pencil"></i></a></td>
 					</tr>
+					<?php $i++ ?>
 				@endforeach
 			</tbody>
 		</table>
 	@else
-		There are no students
+		<p>No student exist! {{ link_to_route('students.create', 'Create new') }}</p><br/>
 	@endif
 
 	@if (Session::has('message'))

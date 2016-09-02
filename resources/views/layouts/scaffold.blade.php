@@ -28,14 +28,17 @@
 			     cursor: pointer;
 			}
 		</style>
+
+		@yield('style')
 	</head>
 	<body>
 		<div class="container">
 			@include('common.menu')
 			@yield('main')
 		</div>
-		{!! HTML::script('js/jquery-3.1.0.slim.min.js') !!}
+		{!! HTML::script('js/jquery-3.1.0.min.js') !!}
 		{!! HTML::script('bootstrap-3.3.7-dist/js/bootstrap.min.js') !!}
+		@yield('script')
 	</body>
 
 </html>

@@ -1,6 +1,7 @@
 <?php
 use Illuminate\Database\Seeder;
 
+use Carbon\Carbon;
 class StudentsTableSeeder extends Seeder {
 
 	public function run(){
@@ -15,6 +16,7 @@ class StudentsTableSeeder extends Seeder {
 			'country' => $faker->country,
 			'password' => $faker->password,
 			'email' => 'rahmanromli@yahoo.com',
+			'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 		for ($i=0; $i < 10; $i++) {
 			DB::table('student')->insert([
@@ -27,6 +29,7 @@ class StudentsTableSeeder extends Seeder {
 				'country' => $faker->country,
 				'password' => $faker->password,
 				'email' => $faker->email,
+				'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
 	        ]);
 		}
 	}

@@ -2,8 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Student;
+use Validator;
+use Input;
+use Redirect;
 use View;
+
+use App\Models\Student;
+
 class StudentsController extends Controller {
 
 	/**

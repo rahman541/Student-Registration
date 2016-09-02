@@ -231,6 +231,7 @@ return [
         // My add
         'Form' => 'Collective\Html\FormFacade',
 		'HTML' => 'Collective\Html\HtmlFacade',
+		'Input' => Illuminate\Support\Facades\Input::class,
     ],
 
 ];

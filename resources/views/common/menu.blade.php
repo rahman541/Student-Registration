@@ -4,8 +4,8 @@
     </div>
     <ul class="nav navbar-nav">
         <!-- <li class="active"><a href="{{ URL::route('students.index') }}">View All Student</a></li> -->
-        {{ HTML::clever_link('students.index', 'Home') }}
-        {{ HTML::clever_link('students.create', 'Create a Student') }}
+        {!! HTML::clever_link('students.index', 'Home') !!}
+        {!! HTML::clever_link('students.create', 'Create a Student') !!}
         <!-- <li><a href="{{ URL::route('students.create') }}">Create a Nerd</a> -->
     </ul>
 </nav>

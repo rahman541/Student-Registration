@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>{{ $title or 'Default' }}</title>
+		<title>{!! $title or 'Default' !!}</title>
 
 		{{-- Load Bootstrap CSS Framework --}}
 		{{ HTML::style('bootstrap-3.3.7-dist/css/bootstrap.min.css') }}
@@ -33,13 +33,13 @@
 			@include('common.menu')
 			@if (Session::has('message'))
 				<div class="flash alert">
-					<div class="alert alert-info">{{ Session::get('message') }}</div>
+					<div class="alert alert-info">{!! Session::get('message') !!}</div>
 				</div>
 			@endif
 			@yield('main')
 		</div>
-		{{ HTML::script('js/jquery-3.1.0.slim.min.js') }}
-		{{ HTML::script('bootstrap-3.3.7-dist/js/bootstrap.min.js') }}
+		{!! HTML::script('js/jquery-3.1.0.slim.min.js') !!}
+		{!! HTML::script('bootstrap-3.3.7-dist/js/bootstrap.min.js') !!}
 	</body>
 
 </html>

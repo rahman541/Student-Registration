@@ -60,13 +60,25 @@ Vagrant.configure("2") do |config|
   # config.push.define "atlas" do |push|
   #   push.app = "YOUR_ATLAS_USERNAME/YOUR_APPLICATION_NAME"
   # end
-  config.vm.provision :shell, path: "provision/phpmyadmin.sh"
+  # config.vm.provision :shell, path: "provision/phpmyadmin.sh"
 
   # Enable provisioning with a shell script. Additional provisioners such as
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
   # documentation for more information about their specific syntax and use.
-  # config.vm.provision "shell", inline: <<-SHELL
-  #   apt-get update
-  #   apt-get install -y apache2
-  # SHELL
+  config.vm.provision "shell", inline: <<-SHELL
+	# set phpmyadmin timeout longer to 8 hour
+	# append_config="$cfg['Servers'][$i]['LoginCookieValidity'] = 28800;"
+	# sudo sed -i "s|$|${append_config}|" /etc/phpmyadmin/config.inc.php
+	
+	echo "Installing phpmyadmin.."
+	DBPASSWD=root
+	echo "phpmyadmin phpmyadmin/dbconfig-install boolean true" | debconf-set-selections
+	echo "phpmyadmin phpmyadmin/app-password-confirm password $DBPASSWD" | debconf-set-selections
+	echo "phpmyadmin phpmyadmin/mysql/admin-pass password $DBPASSWD" | debconf-set-selections
+	echo "phpmyadmin phpmyadmin/mysql/app-pass password $DBPASSWD" | debconf-set-selections
+	echo "phpmyadmin phpmyadmin/reconfigure-webserver multiselect none" | debconf-set-selections
+	apt-get -y install phpmyadmin > /dev/null 2>&1
+
+    sudo service apache2 restart
+  SHELL
 end

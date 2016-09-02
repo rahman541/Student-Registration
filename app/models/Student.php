@@ -1,6 +1,11 @@
 <?php
 
-class Student extends Eloquent implements Robbo\Presenter\PresentableInterface {
+namespace App\models;
+
+use Illuminate\Database\Eloquent\Model;
+
+// class Student extends Eloquent implements Robbo\Presenter\PresentableInterface {
+class Student extends Model {
 
 	protected $guarded = array();
 	protected $table = 'student';
@@ -11,7 +16,7 @@ class Student extends Eloquent implements Robbo\Presenter\PresentableInterface {
 		'last_name' => 'required|min:3',
 	);
 
-	public function getPresenter(){
-		return new StudentPresenter($this);
-	}
+	// public function getPresenter(){
+	// 	return new StudentPresenter($this);
+	// }
 }

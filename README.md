@@ -19,17 +19,20 @@ cd Student-Registration
 vagrant up
 ```
 
-**3.** Create `.env` configuration file from `.env.example` or just rename file `.env.example` to `.env`. Leave all value by default.
-
-**4.** SSH into box
+**3.** SSH into box
 ```
 vagrant ssh
 ```
 >**NOTE:** **Windows user might need to use Cygwin or Git Bash or Putty. If putty ssh into `192.168.0.77` use username `vagrant` and password `vagrant`**
 
-**5.** Change to `www` directory
+**4.** Change to `www` directory
 ```bash
 cd /var/www
+```
+
+**5.** Create `.env` configuration file from `.env.example` or just rename file `.env.example` to `.env`. Leave all value by default.
+```bash
+cp .env.example .env
 ```
 
 **6.** Install the composer dependencies

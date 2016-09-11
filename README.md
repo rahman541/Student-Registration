@@ -4,8 +4,10 @@ An example of simple student registration using laravel framework
 ### Installation & Configuration
 #### Platform & Tools
 - [Virtualbox](https://www.virtualbox.org/wiki/Downloads) 5.0+
-- [Vagrant](https://www.vagrantup.com/) 1.8+
+- [Vagrant](https://www.vagrantup.com/) 1.8+ / [Docker](https://www.docker.com/)
 - SSH client for Windows only : [Cygwin](https://www.cygwin.com/) / [Git Bash](https://git-scm.com/) / [Putty](http://www.putty.org/)
+
+_Note: The use of Vagrant will probably be faded out in favour of Docker in the future._
 
 #### Installation
 **1.** Clone this repo.

@@ -52,7 +52,7 @@ php artisan migrate
 php artisan db:seed
 ```
 
-To disconnect from ssh `Ctrl + D`
+To disconnect from ssh <kbd>Ctrl</kbd>+<kbd>D</kbd>
 
 #### Running web
 Open up your browser and navigate to [http://192.168.0.77/students](http://192.168.0.77/students) and you should see it up and running.
